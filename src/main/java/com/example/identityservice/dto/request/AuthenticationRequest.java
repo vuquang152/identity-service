@@ -3,16 +3,12 @@ package com.example.identityservice.dto.request;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 
-import java.util.Date;
-
 @Data
-@AllArgsConstructor
 @NoArgsConstructor
+@AllArgsConstructor
 @Builder
 @FieldDefaults(level = AccessLevel.PRIVATE)
-public class UserUpdationRequest {
+public class AuthenticationRequest {
+    String username;
     String password;
-    String firstName;
-    String lastName;
-    Date dob;
 }
