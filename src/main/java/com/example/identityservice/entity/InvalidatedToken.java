@@ -1,9 +1,11 @@
 package com.example.identityservice.entity;
 
-import jakarta.persistence.*;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 
+import java.util.Date;
 
 @Entity
 @Getter
@@ -12,8 +14,8 @@ import lombok.experimental.FieldDefaults;
 @AllArgsConstructor
 @Builder
 @FieldDefaults(level = AccessLevel.PRIVATE)
-public class Permission {
+public class InvalidatedToken {
     @Id
-    String name;
-    String description;
+    String id;
+    Date expiryTime;
 }
