@@ -52,11 +52,11 @@ public class AuthenticationService {
     protected String SIGNER_KEY;
 
     @NonFinal
-    @Value("jwt.valid-duration")
+    @Value("${jwt.valid-duration}")
     protected long VALID_DURATION;
 
     @NonFinal
-    @Value("jwt.refreshable-duration")
+    @Value("${jwt.refreshable-duration}")
     protected long REFRESHABLE_DURATION;
 
     public IntrospectResponse introspect(IntrospectRequest request) throws JOSEException, ParseException {
