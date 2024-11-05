@@ -1,11 +1,11 @@
 package com.example.identityservice.validator;
 
-import jakarta.validation.ConstraintValidator;
-import jakarta.validation.ConstraintValidatorContext;
-
 import java.time.LocalDate;
 import java.time.Period;
 import java.util.Objects;
+
+import jakarta.validation.ConstraintValidator;
+import jakarta.validation.ConstraintValidatorContext;
 
 public class DobValidator implements ConstraintValidator<DobConstraint, LocalDate> {
 
@@ -13,8 +13,7 @@ public class DobValidator implements ConstraintValidator<DobConstraint, LocalDat
 
     @Override
     public boolean isValid(LocalDate value, ConstraintValidatorContext context) {
-        if (Objects.isNull(value))
-            return true;
+        if (Objects.isNull(value)) return true;
 
         long years = Period.between(value, LocalDate.now()).getYears();
         return years >= min;

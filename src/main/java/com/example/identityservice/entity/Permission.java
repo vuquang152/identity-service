@@ -5,7 +5,6 @@ import jakarta.persistence.Id;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 
-
 @Entity
 @Getter
 @Setter
@@ -16,5 +15,6 @@ import lombok.experimental.FieldDefaults;
 public class Permission {
     @Id
     String name;
+
     String description;
 }
